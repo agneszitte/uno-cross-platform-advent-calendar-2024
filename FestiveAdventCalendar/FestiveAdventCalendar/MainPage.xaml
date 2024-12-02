@@ -1,0 +1,260 @@
+﻿<Page x:Class="FestiveAdventCalendar.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:FestiveAdventCalendar"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      utu:SafeArea.Insets="VisibleBounds"
+      xmlns:converters="using:CommunityToolkit.WinUI.Converters">
+
+    <Page.Background>
+        <!-- Gradient Page Background -->
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
+            <GradientStop Color="#3D8DF3"
+                          Offset="0.0" />
+            <GradientStop Color="#B3E5FC"
+                          Offset="0.5" />
+            <GradientStop Color="#E0F7FA"
+                          Offset="0.97" />
+            <GradientStop Color="#FFFFFF"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </Page.Background>
+
+    <Page.Resources>
+
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+
+        <!-- CalendarDay Content TextBlock Style -->
+        <Style x:Key="CalendarDayTextBlockStyle"
+               TargetType="TextBlock">
+            <Setter Property="Foreground"
+                    Value="#FF00A6ED" />
+            <Setter Property="Margin"
+                    Value="10" />
+        </Style>
+
+        <!-- CalendarDay Button Content Template -->
+        <DataTemplate x:Key="CalendarDayTemplate">
+            <Grid>
+                <Border Background="#90FFFFFF"
+                        BorderBrush="White"
+                        BorderThickness="3"
+                        CornerRadius="15"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Visibility="{Binding IsTipOpened, Converter={StaticResource BoolToVisibilityConverter}}" />
+                <TextBlock Text="{Binding DayNumber}"
+                           Style="{StaticResource CalendarDayTextBlockStyle}"
+                           HorizontalAlignment="{Binding TextHorizontalAlignment}"
+                           VerticalAlignment="{Binding TextVerticalAlignment}"
+                           FontSize="{Binding WideTextSize}"
+                           Visibility="{utu:Responsive Narrow=Collapsed, Wide=Visible}" />
+                <TextBlock Text="{Binding DayNumber}"
+                           Style="{StaticResource CalendarDayTextBlockStyle}"
+                           HorizontalAlignment="{Binding TextHorizontalAlignment}"
+                           VerticalAlignment="{Binding TextVerticalAlignment}"
+                           FontSize="{Binding NarrowTextSize}"
+                           Visibility="{utu:Responsive Narrow=Visible, Wide=Collapsed}" />
+                <TextBlock Text="❄"
+                           Style="{StaticResource CalendarDayTextBlockStyle}"
+                           HorizontalAlignment="{Binding IconHorizontalAlignment}"
+                           VerticalAlignment="{Binding IconVerticalAlignment}"
+                           FontSize="{Binding WideIconSize}"
+                           Margin="5"
+                           Visibility="{utu:Responsive Narrow=Collapsed, Wide=Visible}" />
+                <TextBlock Text="❄"
+                           Style="{StaticResource CalendarDayTextBlockStyle}"
+                           HorizontalAlignment="{Binding IconHorizontalAlignment}"
+                           VerticalAlignment="{Binding IconVerticalAlignment}"
+                           FontSize="{Binding NarrowIconSize}"
+                           Margin="5"
+                           Visibility="{utu:Responsive Narrow=Visible, Wide=Collapsed}" />
+            </Grid>
+        </DataTemplate>
+
+        <!-- CalendarDay Button Style -->
+        <Style x:Key="CalendarDayButtonStyle"
+               TargetType="Button">
+            <Setter Property="Background"
+                    Value="#78FFFFFF" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Stretch" />
+            <Setter Property="VerticalAlignment"
+                    Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Stretch" />
+            <Setter Property="VerticalContentAlignment"
+                    Value="Stretch" />
+            <Setter Property="CornerRadius"
+                    Value="15" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+            <Setter Property="Padding"
+                    Value="0" />
+            <Setter Property="ContentTemplate"
+                    Value="{StaticResource CalendarDayTemplate}" />
+        </Style>
+
+        <!-- Countdown StackPanel Style -->
+        <Style x:Key="CountdownStackPanelStyle"
+               TargetType="StackPanel">
+            <Setter Property="Margin"
+                    Value="5" />
+            <Setter Property="Background"
+                    Value="#CCFFFFFF" />
+            <Setter Property="Padding"
+                    Value="10" />
+            <Setter Property="Width"
+                    Value="90" />
+            <Setter Property="Height"
+                    Value="90" />
+            <Setter Property="BorderThickness"
+                    Value="4" />
+            <Setter Property="BorderBrush"
+                    Value="White" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="CornerRadius"
+                    Value="5" />
+        </Style>
+
+        <!-- Countdown Separator TextBlock Style -->
+        <Style x:Key="SeparatorTextBlockStyle"
+               TargetType="TextBlock">
+            <Setter Property="Text"
+                    Value=":" />
+            <Setter Property="FontSize"
+                    Value="28" />
+            <Setter Property="Foreground"
+                    Value="#E1E1E1" />
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+        </Style>
+
+        <!-- Countdown Number TextBlock Style -->
+        <Style x:Key="CountdownNumberTextBlockStyle"
+               TargetType="TextBlock">
+            <Setter Property="FontSize"
+                    Value="28" />
+            <Setter Property="Foreground"
+                    Value="#00A6ED" />
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+        </Style>
+
+        <!-- Countdown Label TextBlock Style -->
+        <Style x:Key="CountdownLabelTextBlockStyle"
+               TargetType="TextBlock">
+            <Setter Property="FontSize"
+                    Value="14" />
+            <Setter Property="Foreground"
+                    Value="#3D8DF3" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <!-- Snowfall Canvas -->
+        <Canvas x:Name="SnowCanvas"
+                IsHitTestVisible="False"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" />
+
+        <!-- Calendar Content -->
+        <Viewbox Margin="0,0,0,20">
+            <Grid Grid.RowDefinitions="Auto,*"
+                  Margin="{utu:Responsive Narrow=20, Wide=50}">
+
+                <!-- Header -->
+                <StackPanel Orientation="{utu:Responsive Narrow=Vertical, Wide=Horizontal}"
+                            HorizontalAlignment="Center">
+                    <!-- Header Texts -->
+                    <StackPanel HorizontalAlignment="{utu:Responsive Narrow=Center, Wide=Left}"
+                                VerticalAlignment="Center">
+                        <TextBlock Text="Festive Advent Calendar"
+                                   Foreground="White"
+                                   FontWeight="Bold"
+                                   FontSize="{utu:Responsive Narrow=38, Wide=60}"
+                                   HorizontalAlignment="{utu:Responsive Narrow=Center, Wide=Left}" />
+
+                        <TextBlock Text="{x:Bind CurrentDateTimeFormatted, Mode=OneWay}"
+                                   Foreground="White"
+                                   FontWeight="SemiBold"
+                                   FontSize="{utu:Responsive Narrow=14, Wide=20}"
+                                   Margin="0,0,0,10"
+                                   HorizontalAlignment="{utu:Responsive Narrow=Center, Wide=Left}" />
+                    </StackPanel>
+
+                    <!-- Header Countdown -->
+                    <Border Grid.Column="1"
+                            DoubleTapped="Countdown_DoubleTapped"
+                            HorizontalAlignment="{utu:Responsive Narrow=Center, Wide=Right}"
+                            VerticalAlignment="Center">
+                        <StackPanel Padding="{utu:Responsive Narrow='0,0,0,40', Wide='20,0,0,0'}"
+                                    Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+                            <!-- Days -->
+                            <StackPanel Style="{StaticResource CountdownStackPanelStyle}">
+                                <TextBlock Text="{x:Bind DaysLeft, Mode=OneWay}"
+                                           Style="{StaticResource CountdownNumberTextBlockStyle}" />
+                                <TextBlock Text="Days"
+                                           Style="{StaticResource CountdownLabelTextBlockStyle}" />
+                            </StackPanel>
+
+                            <!-- Separator -->
+                            <TextBlock Style="{StaticResource SeparatorTextBlockStyle}" />
+
+                            <!-- Hours -->
+                            <StackPanel Style="{StaticResource CountdownStackPanelStyle}">
+                                <TextBlock Text="{x:Bind HoursLeft, Mode=OneWay}"
+                                           Style="{StaticResource CountdownNumberTextBlockStyle}" />
+                                <TextBlock Text="Hours"
+                                           Style="{StaticResource CountdownLabelTextBlockStyle}" />
+                            </StackPanel>
+
+                            <!-- Separator -->
+                            <TextBlock Style="{StaticResource SeparatorTextBlockStyle}" />
+
+                            <!-- Minutes -->
+                            <StackPanel Style="{StaticResource CountdownStackPanelStyle}">
+                                <TextBlock Text="{x:Bind MinutesLeft, Mode=OneWay}"
+                                           Style="{StaticResource CountdownNumberTextBlockStyle}" />
+                                <TextBlock Text="Minutes"
+                                           Style="{StaticResource CountdownLabelTextBlockStyle}" />
+                            </StackPanel>
+
+                            <!-- Separator -->
+                            <TextBlock Style="{StaticResource SeparatorTextBlockStyle}" />
+
+                            <!-- Seconds -->
+                            <StackPanel Style="{StaticResource CountdownStackPanelStyle}">
+                                <TextBlock Text="{x:Bind SecondsLeft, Mode=OneWay}"
+                                           Style="{StaticResource CountdownNumberTextBlockStyle}" />
+                                <TextBlock Text="Seconds"
+                                           Style="{StaticResource CountdownLabelTextBlockStyle}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <!-- CalendarGrid defined with 5 rows and 7 columns -->
+                <Grid x:Name="CalendarGrid"
+                      Grid.Row="1"
+                      MinHeight="650"
+                      Margin="0,10,0,0"
+                      ColumnSpacing="10"
+                      RowSpacing="10"
+                      RowDefinitions="*,*,*,*,*"
+                      ColumnDefinitions="*,*,*,*,*,*,*" />
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Page>

@@ -1,0 +1,102 @@
+[
+  {
+    "Day": 1,
+    "TipContent": "Use 'using' statement to automatically dispose resources."
+  },
+  {
+    "Day": 2,
+    "TipContent": "String interpolation is cleaner than string.Format(). Use $\"Hello {name}\" instead of string.Format(\"Hello {0}\", name)."
+  },
+  {
+    "Day": 3,
+    "TipContent": "Use 'var' keyword for implicit typing, but make sure the type is clear from context."
+  },
+  {
+    "Day": 4,
+    "TipContent": "Always initialize fields and properties to avoid NullReferenceException."
+  },
+  {
+    "Day": 5,
+    "TipContent": "Use the 'nameof' expression to avoid magic strings in argument checks and property bindings."
+  },
+  {
+    "Day": 6,
+    "TipContent": "Use 'async' and 'await' for I/O-bound tasks to avoid blocking the main thread."
+  },
+  {
+    "Day": 7,
+    "TipContent": "Use 'yield return' in enumerators to lazily return a sequence of values."
+  },
+  {
+    "Day": 8,
+    "TipContent": "Use 'null-coalescing' operator (??) to provide a default value for null variables."
+  },
+  {
+    "Day": 9,
+    "TipContent": "Use 'null-conditional' operator (?.) to simplify null checks."
+  },
+  {
+    "Day": 10,
+    "TipContent": "Prefer properties over public fields to encapsulate data."
+  },
+  {
+    "Day": 11,
+    "TipContent": "Use pattern matching with 'is' to simplify type checking and casting."
+  },
+  {
+    "Day": 12,
+    "TipContent": "Use 'switch' expressions for cleaner, concise conditional logic."
+  },
+  {
+    "Day": 13,
+    "TipContent": "Use extension methods to add functionality to existing types without modifying them."
+  },
+  {
+    "Day": 14,
+    "TipContent": "Prefer returning IEnumerable<T> over List<T> or Array when returning collections from methods, unless the specific collection type is necessary for performance reasons or required operations."
+  },
+  {
+    "Day": 15,
+    "TipContent": "Make use of object initializers to set properties at the time of object creation."
+  },
+  {
+    "Day": 16,
+    "TipContent": "Use '??=' (null-coalescing assignment) operator to assign a value if the variable is null."
+  },
+  {
+    "Day": 17,
+    "TipContent": "Use the 'params' keyword to pass a variable number of arguments to a method."
+  },
+  {
+    "Day": 18,
+    "TipContent": "Always prefer 'TryParse' over 'Parse' to avoid exceptions during conversions."
+  },
+  {
+    "Day": 19,
+    "TipContent": "Mark classes or methods that won’t be inherited with 'sealed' or 'static' to prevent inheritance and override."
+  },
+  {
+    "Day": 20,
+    "TipContent": "Use 'readonly' for fields that should not be changed after initialization, but can't be marked 'const'."
+  },
+  {
+    "Day": 21,
+    "TipContent": "Use 'in' parameters in methods to pass large value types by reference without allowing modification."
+  },
+  {
+    "Day": 22,
+    "TipContent": "Use 'ref' locals and returns to avoid copying large structs when performance is critical."
+  },
+  {
+    "Day": 23,
+    "TipContent": "Use 'Span<T>' and 'Memory<T>' for working with arrays and slices to minimize allocations and improve performance."
+  },
+  {
+    "Day": 24,
+    "TipContent": "Starting with C# 11, use UTF-8 string literals with the 'u8' suffix for efficient handling of UTF-8 encoded data. For example, \"Hello, World!\"u8 creates a ReadOnlySpan<byte> with UTF-8 encoded bytes."
+  },
+  {
+    "Day": 25,
+    "TipContent": "Prefer 'LINQ' for querying collections to simplify code readability."
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "FestiveAdventCalendar",
+  "display": "standalone",
+  "name": "FestiveAdventCalendar",
+  "short_name": "FestiveAdventCalendar",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}
