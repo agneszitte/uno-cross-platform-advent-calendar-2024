@@ -4,6 +4,8 @@ A festive and interactive cross-platform advent calendar app, powered by the ope
 
 This project brings holiday cheer with responsive design, daily surprises, and interactive features, all while showcasing the power of modern .NET development.
 
+https://github.com/user-attachments/assets/6f2ce0ec-da25-45a9-9e7e-1727ddd24949
+
 ## ✨ Features Include:
 - **Countdown Timer with Holiday Cheer 🎅**  
   Celebrate the countdown to the holidays with a festive timer.
