@@ -63,7 +63,9 @@ Let’s spread the holiday spirit with a cross-platform touch! 🎅🌟
 
 🎥 **Watch the video below** for an exclusive look at how Uno Platform’s Studio featuring Hot Design can transform your development workflow.
 
-https://github.com/user-attachments/assets/9335c986-456b-4bef-a639-dacb7f6ea503
+(Youtube link: https://youtu.be/z1IscX_wcWg)
+
+https://github.com/user-attachments/assets/6eeff406-c149-44ef-afb7-c45ec01eef24
 
 If you missed the announcement, check out the [video here](https://www.youtube.com/watch?v=sJPyieyt1Rc&ab_channel=dotnet) and the [announcement blog post here](https://platform.uno/blog/uno-platform-studio-featuring-hot-design/). Don’t forget to [join the waitlist](https://platform.uno/waitlist/) for beta testing and be among the first to experience this game-changing tool! 🚀
 
