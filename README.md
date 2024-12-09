@@ -77,8 +77,6 @@ If you missed the announcement, check out the [video here](https://www.youtube.c
 - [Windows Community Toolkit](https://github.com/CommunityToolkit/Windows)  
 - [Uno Toolkit](https://aka.platform.uno/uno-toolkit)  
 
----
-
 ## Screenshots
 
 ### Windows
