@@ -34,6 +34,9 @@ Want to learn how this app was built? Check out the [full guide](https://medium.
 
 **Hot Design™** is the next-generation Visual Designer for cross-platform .NET Applications. It seamlessly transforms your running app into a design interface, accessible from any IDE on any OS.
 
+[➜ Learn more about Uno Platform Studio](https://aka.platform.uno/studio)
+[➜ Learn more about Hot Design™](https://aka.platform.uno/hot-design)
+
 ### Why is it a game-changer?
 
 - **Works with Visual Studio, VS Code, or Rider**  
