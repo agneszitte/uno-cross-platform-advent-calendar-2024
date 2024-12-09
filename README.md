@@ -54,11 +54,16 @@ Want to learn how this app was built? Check out the [full guide](https://medium.
 - **Design UI for a Remote Device**  
   Fine-tune your app’s UI in real time on remote hardware, without redeployment hassles.
 
-🎥 **Watch the video below** for an exclusive look at how Uno Platform’s Studio featuring Hot Design can transform your development workflow.
+🎥 **Watch the videos below** for an exclusive look at how Uno Platform’s Studio featuring Hot Design can transform your development workflow.
 
-(Youtube link: https://youtu.be/z1IscX_wcWg)
+- YouTube Link: https://youtu.be/0W2IADsKCXw?si=mvfO4VziRUJxVkt9
 
-https://github.com/user-attachments/assets/6eeff406-c149-44ef-afb7-c45ec01eef24
+  https://github.com/user-attachments/assets/b5a1513d-b0ce-4809-98d1-331775f27f68
+
+- YouTube Link: https://youtu.be/z1IscX_wcWg
+
+  https://github.com/user-attachments/assets/6eeff406-c149-44ef-afb7-c45ec01eef24
+
 
 If you missed the announcement, check out the [video here](https://www.youtube.com/watch?v=sJPyieyt1Rc&ab_channel=dotnet) and the [announcement blog post here](https://platform.uno/blog/uno-platform-studio-featuring-hot-design/). Don’t forget to [join the waitlist](https://platform.uno/waitlist/) for beta testing and be among the first to experience this game-changing tool! 🚀
 
