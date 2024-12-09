@@ -28,6 +28,8 @@ Make the app your own!
 ## 📖 **Learn More:**  
 Want to learn how this app was built? Check out the [full guide](https://medium.com/@agnes.zitte/bring-holiday-cheer-to-friends-family-build-a-cross-platform-advent-calendar-app-for-every-264268732e2f) and discover how to create your own festive cross-platform advent calendar app! 🎅✨
 
+Let’s spread the holiday spirit with a cross-platform touch! 🎅🌟
+
 ## 🎁 Sneak Peek Gift: Festive Advent Calendar - Uno Platform Studio featuring Hot Design™
 
 ### What is Hot Design™?
@@ -75,7 +77,7 @@ If you missed the announcement, check out the [video here](https://www.youtube.c
 - [Windows Community Toolkit](https://github.com/CommunityToolkit/Windows)  
 - [Uno Toolkit](https://aka.platform.uno/uno-toolkit)  
 
-Let’s spread the holiday spirit with a cross-platform touch! 🎅🌟
+---
 
 ## Screenshots
 
